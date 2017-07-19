@@ -1,7 +1,7 @@
 package com.epam.lab.task2.model.gun;
 
 import com.epam.lab.task2.view.PrintToConsole;
-import com.epam.lab.task2.Constants;
+import com.epam.lab.task2.model.Constants;
 
 public class Rocket extends Gun {
 

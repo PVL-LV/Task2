@@ -1,6 +1,6 @@
 package com.epam.lab.task2.model.gun;
 
-import com.epam.lab.task2.Constants;
+import com.epam.lab.task2.model.Constants;
 import com.epam.lab.task2.view.PrintToConsole;
 
 public class Blaster extends Gun {

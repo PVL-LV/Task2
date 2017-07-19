@@ -6,5 +6,5 @@ public abstract class Droid {
 
     public abstract int getWalk();
 
-    public abstract int getDefence();
+    public abstract int getEnergyLevel();
 }

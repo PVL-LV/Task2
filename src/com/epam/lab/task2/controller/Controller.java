@@ -1,29 +1,51 @@
 package com.epam.lab.task2.controller;
 
-import com.epam.lab.task2.model.droid.B1Droid;
-import com.epam.lab.task2.model.droid.B2Droid;
-import com.epam.lab.task2.model.droid.Droid;
-import com.epam.lab.task2.model.gun.Blaster;
-import com.epam.lab.task2.model.gun.Gun;
-import com.epam.lab.task2.model.gun.Rocket;
+import com.epam.lab.task2.model.droid.*;
+import com.epam.lab.task2.model.gun.*;
 import com.epam.lab.task2.view.PrintToConsole;
-
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Controller {
-    int usersDroid;
-    int usersGun;
-    int usersTactic;
-    int enemyDroid;
-    int enemyGun;
-    int enemyTactic;
+    private int usersDroid;
+    private int usersGun;
+    private int usersTactic;
+    private int enemyDroid;
+    private int enemyGun;
+    private int enemyTactic;
+    private Droid b1 = new B1Droid();
+    private Droid b2 = new B2Droid();
+    private Gun blaster = new Blaster();
+    private Gun rocket = new Rocket();
 
-    Droid b1 = new B1Droid();
-    Droid b2 = new B2Droid();
-    Gun blaster = new Blaster();
-    Gun rocket = new Rocket();
+    public Controller() {
+        startGame();
+        createEnemyDroid();
+        startBattle();
+    }
+
+    public int getUsersDroid() {
+        return usersDroid;
+    }
+
+    public int getUsersGun() {
+        return usersGun;
+    }
+
+    public int getUsersTactic() {
+        return usersTactic;
+    }
+
+    public int getEnemyDroid() {
+        return enemyDroid;
+    }
+
+    public int getEnemyGun() {
+        return enemyGun;
+    }
+
+    public int getEnemyTactic() {
+        return enemyTactic;
+    }
 
     public void startGame() {
         askUser("Game Started! \nChoose your Droid:  ");
@@ -36,7 +58,7 @@ public class Controller {
         rocket.print();
         askUser("Blaster - enter 1, rocket - enter 2");
         usersGun = readFromConsole();
-        askUser("Chose your tactic:\n1. More attack.\n2.More getDefence");
+        askUser("Chose your tactic:\n1. More attack.\n2.More Defence");
         usersTactic = readFromConsole();
     }
 
@@ -44,10 +66,10 @@ public class Controller {
         String droid;
         String gun;
         String tactic;
+
         enemyDroid = random();
         enemyGun = random();
         enemyTactic = random();
-
         if (enemyDroid == 1) {
             droid = "B1";
         } else {
@@ -69,23 +91,21 @@ public class Controller {
     public void startBattle() {
         PrintToConsole printToConsole = new PrintToConsole();
         printToConsole.printStartBattle();
-        CountWhoWin countWhoWin = new CountWhoWin();
-        countWhoWin.findWinner();
     }
 
-    public int random() {
-        int random = (int) ( Math.random() * 2 + 1);
+    private int random() {
+        int random = (int)( Math.random() * 2 + 1);
         return random;
     }
 
-    public int readFromConsole() {
+    private int readFromConsole() {
         int input;
         Scanner scanner = new Scanner(System.in);
         input = scanner.nextInt();
         return input;
     }
 
-    public void askUser(String string) {
+    private void askUser(String string) {
         System.out.println(string);
     }
 }

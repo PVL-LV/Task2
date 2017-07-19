@@ -1,6 +1,6 @@
 package com.epam.lab.task2.model.droid;
 
-import com.epam.lab.task2.Constants;
+import com.epam.lab.task2.model.Constants;
 import com.epam.lab.task2.view.PrintToConsole;
 
 public class B2Droid extends Droid {
@@ -11,7 +11,7 @@ public class B2Droid extends Droid {
     }
 
     @Override
-    public int getDefence() {
+    public int getEnergyLevel() {
         return Constants.B2_DROID_DEFENCE;
     }
 

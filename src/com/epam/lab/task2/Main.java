@@ -1,14 +1,11 @@
 package com.epam.lab.task2;
 
-import com.epam.lab.task2.controller.Controller;
+import com.epam.lab.task2.controller.CountWhoWin;
 
 public class Main {
 
     public static void main(String[] args) {
-        Controller controller = new Controller();
-        controller.startGame();
-        controller.createEnemyDroid();
-        controller.startBattle();
-
+        CountWhoWin countWhoWin = new CountWhoWin();
+        countWhoWin.findWinner();
     }
 }
