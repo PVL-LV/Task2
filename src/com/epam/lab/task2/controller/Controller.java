@@ -66,7 +66,6 @@ public class Controller {
         String droid;
         String gun;
         String tactic;
-
         enemyDroid = random();
         enemyGun = random();
         enemyTactic = random();

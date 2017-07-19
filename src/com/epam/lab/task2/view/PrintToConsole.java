@@ -15,8 +15,6 @@ public class PrintToConsole {
                 {"   ", "     | |     ", "   ", "   ", "   ", "   ", "   "},
                 {"   ", "             ", "   ", "   ", "   ", "   ", "   "}
         };
-
-
         for (String[] row : board) {
             for (String card : row) {
                 System.out.print(card + "\t");
@@ -38,8 +36,6 @@ public class PrintToConsole {
                 {" ", "         || ||        ", "   ", "   ", "   ", "   ", "   "},
                 {" ", "                      ", "   ", "   ", "   ", "   ", "   "}
         };
-
-
         for (String[] row : board) {
             for (String card : row) {
                 System.out.print(card + "\t");
@@ -61,8 +57,6 @@ public class PrintToConsole {
                 {"   ", "                                     ", "   ", "   ", "   ", "   ", "   "},
                 {"   ", "                                     ", "   ", "   ", "   ", "   ", "   "}
         };
-
-
         for (String[] row : board) {
             for (String card : row) {
                 System.out.print(card + "\t");
@@ -82,8 +76,6 @@ public class PrintToConsole {
                 {"   ", "         |   |   |    ", "   ", "   ", "   ", "   ", "   "},
                 {"   ", "        /   / \\   \\        ", "   ", "   ", "   ", "   ", "   "}
         };
-
-
         for (String[] row : board) {
             for (String card : row) {
                 System.out.print(card + "\t");
@@ -105,15 +97,11 @@ public class PrintToConsole {
                 {" ", "               ", "   ", "   ", "   ", "   ", "   "},
                 {" ", "                      ", "   ", "   ", "   ", "   ", "   "}
         };
-
-
         for (String[] row : board) {
             for (String card : row) {
                 System.out.print(card + "\t");
             }
             System.out.println();
         }
-
-
     }
 }
